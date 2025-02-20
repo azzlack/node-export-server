@@ -55,6 +55,8 @@ const start = async () => {
 
       // Start server
       if (options.server.enable) {
+        await main.startModulesServer();
+
         // Init the export mechanism for the server configuration
         await main.initExport(options);
 
